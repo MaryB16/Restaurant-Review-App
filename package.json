@@ -1,0 +1,22 @@
+{
+  "name": "restaurant-review-app",
+  "version": "1.0.0",
+  "description": "Udacity 6th Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaryB16/Restaurant-Review-App.git"
+  },
+  "author": "Mary B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaryB16/Restaurant-Review-App/issues"
+  },
+  "homepage": "https://github.com/MaryB16/Restaurant-Review-App#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  }
+}
