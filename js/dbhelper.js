@@ -153,11 +153,11 @@ class DBHelper {
     return (`/img/${restaurant.photograph}`);
   }
     
-  /**
+/**
    * Restaurant image alt text.
    */ 
   static imageAltsForRestaurantPhotographs(restaurant){
-    return(`/img/${restaurant.photograph_alternate_text}`);
+    return(`Photo of ${restaurant.name} restaurant in ${restaurant.neighborhood}`);
   }    
 
   /**
