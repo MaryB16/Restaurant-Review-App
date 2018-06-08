@@ -80,6 +80,13 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+    //Adds a title to the google maps iframe
+   google.maps.event.addListenerOnce(self.map,'tilesloaded',iframeTitle);
+    
+    function iframeTitle() {
+        document.querySelector('iframe').setAttribute('title', 'Google Maps');
+};
+    //document.querySelector('iframe').setAttribute('title', 'Google Maps')   
   updateRestaurants();
 }
 
@@ -141,7 +148,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  //Added image alternative text for accessibility on main page
+  //Added image alternative text for accessibility
   image.alt = DBHelper.imageAltsForRestaurantPhotographs(restaurant);    
   li.append(image);
 

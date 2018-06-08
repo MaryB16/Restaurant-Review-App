@@ -14,6 +14,12 @@ window.initMap = () => {
         center: restaurant.latlng,
         scrollwheel: false
       });
+   //Adds a title to the google maps iframe
+   google.maps.event.addListenerOnce(self.map,'tilesloaded',iframeTitle);
+    function iframeTitle() {
+        document.querySelector('iframe').setAttribute('title', 'Google Maps');
+    };        
+      
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
