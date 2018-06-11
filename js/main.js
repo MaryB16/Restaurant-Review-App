@@ -80,13 +80,11 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
-    //Adds a title to the google maps iframe
+   //Adds a title to the google maps iframe
    google.maps.event.addListenerOnce(self.map,'tilesloaded',iframeTitle);
-    
     function iframeTitle() {
         document.querySelector('iframe').setAttribute('title', 'Google Maps');
-};
-    //document.querySelector('iframe').setAttribute('title', 'Google Maps')   
+    }; 
   updateRestaurants();
 }
 
@@ -167,6 +165,8 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("role", "button");
+  more.setAttribute("aria-label",`View details for ${restaurant.name} in ${restaurant.neighborhood}`)
   li.append(more)
 
   return li

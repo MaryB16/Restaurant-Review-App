@@ -13,6 +13,7 @@
   <header>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
+      <a href="#filter-options" class="skip-link" > Skip to Restaurant Selection </a>
     </nav>
   </header>
 
@@ -21,18 +22,18 @@
       <div id="map"></div>
     </section>
     <section>
-      <div class="filter-options">
+      <div id="filter-options" class="filter-options">
         <h2>Filter Results</h2>
         <div class=select-container>
-         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()" aria-label="Search for restaurants by neighborhood">
           <option value="all">All Neighborhoods</option>
          </select>
-         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+         <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()" aria-label="Search for restaurants by cuisines">
           <option value="all">All Cuisines</option>
          </select>
         </div>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul tabindex=0 aria-label="List of restaurants" id="restaurants-list"></ul>
     </section>
   </main>
 
@@ -42,7 +43,7 @@
 
 
   <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017 <a href="/" aria-hidden="true"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
 </body>
