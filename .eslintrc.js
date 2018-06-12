@@ -5,7 +5,7 @@ module.exports = {
         "browser":true
 	},
 	rules: {
-    	"indent": ["error", 2],
+    	"indent": ["error", 4],
         "semi": [1, "always"],
         "no-multiple-empty-lines": [2, {"max": 2, "maxEOF": 1}],
         "no-console":1,
