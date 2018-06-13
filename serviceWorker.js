@@ -1,8 +1,8 @@
 //Caching  the files in the  in the install event of the service worker
-let cacheName = 'restaurantCache1';
+let currentCacheName = 'restaurantCache1';
 self.addEventListener('install', function (event) {
     event.waitUntil(
-        caches.open('cacheName').then(function (cache) {
+        caches.open('currentCacheName').then(function (cache) {
             console.log('Cashing files');
             return cache.addAll([
                 '/',
@@ -32,7 +32,8 @@ self.addEventListener('activate', function (event) {
         caches.keys().then(function (cacheNames) {
             return Promise.all(
                 cacheNames.map(function (oldCacheFiles) {
-                    if(oldCacheFiles !== cacheName) return caches.delete(oldCacheFiles);
+                    
+                    if(oldCacheFiles !== currentCacheName) return caches.delete(oldCacheFiles);
                 })
             );
         })
