@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <!--added viewport meta tag-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
@@ -13,7 +12,7 @@
   <header>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
-      <a href="#filter-options" class="skip-link" > Skip to Restaurant Selection </a>
+      <a href="#filter-options" class="skip-link">Skip to Restaurant Selection</a>
     </nav>
   </header>
 
@@ -36,16 +35,15 @@
       <ul tabindex=0 aria-label="List of restaurants" id="restaurants-list"></ul>
     </section>
   </main>
-
+  
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/" aria-hidden="true"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+  
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB24IBBe2tMW4L7g7HrTveTomXAxkJWVbE&libraries=places&callback=initMap"></script>
   <script type="application/javascript" charset="utf-8" src=register_serviceWorker.js></script>
-
-  <footer id="footer">
-    Copyright (c) 2017 <a href="/" aria-hidden="true"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
-  </footer>
-
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-//Caching  the files in the  in the install event of the service worker
+//Caches the files in the install event of the service worker
 let currentCacheName = 'restaurantCache1';
 self.addEventListener('install', function (event) {
     event.waitUntil(
@@ -27,12 +27,12 @@ self.addEventListener('install', function (event) {
     );
 });
 
+// Deletes old cache files
 self.addEventListener('activate', function (event) {
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
             return Promise.all(
                 cacheNames.map(function (oldCacheFiles) {
-                    
                     if(oldCacheFiles !== currentCacheName) return caches.delete(oldCacheFiles);
                 })
             );
@@ -40,12 +40,13 @@ self.addEventListener('activate', function (event) {
     );   
 });
 
+// Checks if the there is a cached response for every request
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function (response) {
-            //if the response is truthy
+            //if we got a response from the cache return it
             if (response) return response;
-            //otherwise i'll return a fetch to the network for the original request
+            //otherwise return a fetch to the network for the original request
             else return fetch(event.request);
         })
     );

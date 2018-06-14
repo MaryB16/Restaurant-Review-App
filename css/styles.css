@@ -104,8 +104,6 @@ nav {
     text-align: center;
 }
 
-/*MODIFICATIONS*/
-
 nav h1 {
     padding-top: 1.1em;
 }
@@ -169,8 +167,6 @@ nav h1 a {
 
 /* ====================== Restaurant Filtering ====================== */
 
-/*MODIFICATIONS*/
-
 .filter-options {
     display: flex;
     flex-wrap: wrap;
@@ -180,8 +176,6 @@ nav h1 a {
     justify-content: center;
 }
 
-/*MODIFICATIONS*/
-
 .filter-options h2 {
     color: white;
     font-size: 1.3rem;
@@ -189,7 +183,6 @@ nav h1 a {
     line-height: 1.2;
     margin: 0 20px;
 }
-
 
 .filter-options select {
     background-color: white;
@@ -205,8 +198,6 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 
-/*MODIFICATIONS*/
-
 #restaurants-list {
     background-color: #f3f3f3;
     list-style: outside none none;
@@ -218,8 +209,6 @@ nav h1 a {
     justify-content: center;
 }
 
-/*MODIFICATIONS*/
-
 #restaurants-list li {
     background-color: #fff;
     border: 2px solid #ccc;
@@ -230,8 +219,6 @@ nav h1 a {
     text-align: left;
     width: 350px;
 }
-
-/*MODIFICATIONS*/
 
 #restaurants-list .restaurant-img {
     background-color: #ccc;
@@ -374,8 +361,6 @@ nav h1 a {
     border-bottom-right-radius: 25px;
 }
 
-/*MODIFICATIONS*/
-
 #reviews-list li p {
     margin: 0 0 10px;
     padding: 15px 10px 0 10px;
@@ -393,10 +378,7 @@ nav h1 a {
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 15px;
-
 }
-
-/*MODIFICATIONS created div*/
 
 #reviews-list li div {
     background-color: #333;
@@ -421,11 +403,9 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 
 @media screen and (max-width:399px) {
-
     nav h1 {
         padding-top: 0;
     }
-
 }
 
 @media screen and (min-width:500px) and (max-width:900px) {
@@ -436,7 +416,6 @@ nav h1 a {
 }
 
 @media screen and (max-width:900px) {
-
     html {
         box-sizing: border-box;
     }
@@ -464,24 +443,11 @@ nav h1 a {
         top: 130px;
     }
 
-    #restaurant-container {
-        width: 100%;
-    }
-
+    #restaurant-container,
     #restaurant-img,
-    #restaurant-cuisine {
-        width: 100%;
-    }
-
-    #reviews-container {
-        width: 100%;
-
-    }
-
-    #reviews-list li {
-        width: 100%;
-    }
-
+    #restaurant-cuisine,
+    #reviews-container,
+    #reviews-list li,
     .inside #footer {
         width: 100%;
     }
